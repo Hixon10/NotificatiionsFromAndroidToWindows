@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">NotificationsToGit</string>
+    <string name="service_label">GitNotificationListener</string>
+</resources>
