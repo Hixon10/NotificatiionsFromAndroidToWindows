@@ -4,8 +4,8 @@ This application listens to all android notifications, filter them and execute `
 
 ## Configuration of project
 
-1. Set your token in `ru.hixon.notificationstogit.GitNotificationListener.GITHUB_PERSONAL_TOKEN`. You can get the token by visiting [https://github.com/settings/tokens](https://github.com/settings/tokens).
-2. Set repository API URL in `ru.hixon.notificationstogit.GitNotificationListener.GITHUB_API_URL`.
+1. Set your token in [ru.hixon.notificationstogit.GitNotificationListener.GITHUB_PERSONAL_TOKEN](https://github.com/Hixon10/NotificatiionsFromAndroidToWindows/blob/main/NotificationsToGit/app/src/main/java/ru/hixon/notificationstogit/GitNotificationListener.java#L35). You can get the token by visiting [https://github.com/settings/tokens](https://github.com/settings/tokens).
+2. Set repository API URL in [ru.hixon.notificationstogit.GitNotificationListener.GITHUB_API_URL](https://github.com/Hixon10/NotificatiionsFromAndroidToWindows/blob/main/NotificationsToGit/app/src/main/java/ru/hixon/notificationstogit/GitNotificationListener.java#L36).
 
 ## Configuration of yours mobile phone
 
