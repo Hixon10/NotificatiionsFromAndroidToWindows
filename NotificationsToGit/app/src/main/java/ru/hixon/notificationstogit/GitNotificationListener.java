@@ -35,15 +35,10 @@ public class GitNotificationListener extends NotificationListenerService {
     private static final String GITHUB_PERSONAL_TOKEN = "";
     private static final String GITHUB_API_URL = "";
 
-    private static final Set<String> IGNORE_PACKAGES = Collections.unmodifiableSet(new HashSet<>(Arrays.asList(
-            "com.google.android.apps.wellbeing",
-            "com.google.android.googlequicksearchbox",
-            "com.miui.bugreport",
-            "com.bambuna.podcastaddict",
-            "android",
-            "com.spotify.music",
-            "com.revolut.revolut",
-            "com.google.android.deskclock")));
+    private static final Set<String> PACKAGES_FOR_NOTIFICATIONS = Collections.unmodifiableSet(new HashSet<>(Arrays.asList(
+            "ru.yandex.mail",
+            "com.whatsapp",
+            "org.telegram.messenger")));
     
     public static final String CURRENT_PACKAGE = "ru.hixon.notificationstogit";
 
@@ -69,8 +64,8 @@ public class GitNotificationListener extends NotificationListenerService {
             // when we start the app, we got a strange event with this name
             return;
         }
-        if (IGNORE_PACKAGES.contains(packageName)) {
-            // I don't care about this event
+        if (!PACKAGES_FOR_NOTIFICATIONS.contains(packageName)) {
+            // I don't care about other events
             return;
         }
 
