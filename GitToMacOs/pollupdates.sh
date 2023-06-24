@@ -1,5 +1,5 @@
 #!/bin/bash
-set -euo pipefail
+set -uo pipefail
 
 GITHUB_LOGIN="";
 GITHUB_PERSONAL_TOKEN="";
@@ -11,6 +11,10 @@ GIT_EVENTS_FILE_PATH="${GIT_DIRECOTRY}/events.txt";
 cd $GIT_DIRECOTRY;
 
 PULL_RESULT=$(git pull $GITHUB_PULL_URL);
+if [ $? -ne 0 ]; then
+    echo "got error in git pull";
+    exit 0;
+fi
 
 if [[ ${PULL_RESULT} != *"Already up to date"* ]];then
     echo "not contains";
